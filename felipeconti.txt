@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Minha Coleção</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 24px;
+            border-radius: 15px;
+            
+        }
+        .gallery {
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery img {
+            width: 200px;
+            border: 3px solid #ccc;
+            margin: 10px;
+            border-radius: 0;
+        }
+        
+        .caption {
+            font-size: 14px;
+            margin-top: 4px;
+            color: #333;
+        }
+        p {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+     Álbum de Figurinhas – Copa do Mundo 2018
+</header>
+
+<section class="gallery">
+    <h2>Sobre o Álbum</h2>
+    <p>
+        O álbum oficial da Copa do Mundo 2018 foi lançado pela empresa Panini.
+        Ele possui varias figurinhas de jogadores, seleções e estádios.
+        Ela aconteceu na Russia, sendo a França campeã.
+    </p>
+</section>
+
+<section class="gallery">
+    <h2>Capa do Álbum</h2>
+    <img src="https://img.olx.com.br/images/70/703601496244363.jpg">
+    <div class="caption">Capa oficial do álbum da Copa 2018</div>
+
+    <h2>Pagina da Seleção Brasileira completa</h2>
+    <img class="brasil" src="https://s2-g1.glbimg.com/MPjiN1aW0FGy1llfIRI1bp1onOQ=/0x0:1000x750/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/B/y/htg5m8RAqgZkLc5Gkq2Q/os-18-jogadores-do-brasil-no-album-de-figurinhas-da-copa-do-mundo.jpeg">
+    <div class="caption">Figurinhas da seleção brasileira no álbum</div>
+
+</section>
+
+</body>
+</html>
