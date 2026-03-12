@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Curiosidades e fatos históricos da Ciência da Computação">
+<meta name="author" content="Portal Computação">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo Confuso da Computação</title>
+
+<!-- Tailwind CSS + DaisyUI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    plugins: [daisyui],
+    daisyui: { themes: ["light"] }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/daisyui@3.6.0/dist/full.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+<div class="container mx-auto p-4">
+
+  <!-- Header Principal -->
+  <header class="text-center mb-6">
+    <h1 class="text-3xl font-bold mb-2">Arquivo (Quase) Perdido da Ciência da Computação</h1>
+    <p>Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
+  </header>
+
+  <!-- Menu -->
+  <nav class="mb-6">
+    <ul class="flex flex-wrap gap-2 justify-center">
+      <li><a class="btn btn-sm btn-outline" href="#pioneiros">Pioneiros</a></li>
+      <li><a class="btn btn-sm btn-outline" href="#bugs">Bugs</a></li>
+      <li><a class="btn btn-sm btn-outline" href="#internet">Internet</a></li>
+      <li><a class="btn btn-sm btn-outline" href="#linguagens">Linguagens</a></li>
+      <li><a class="btn btn-sm btn-outline" href="#linha-do-tempo">Linha do Tempo</a></li>
+      <li><a class="btn btn-sm btn-outline" href="#formulario">Envie Algo</a></li>
+    </ul>
+  </nav>
+
+  <main class="space-y-8">
+
+    <!-- Seção Pioneiros -->
+    <section id="pioneiros">
+      <h2 class="text-2xl font-bold mb-4">Pioneiros Esquecidos</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card bg-red-600 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Ada Lovelace</h3>
+          <p>Considerada a primeira programadora da história.</p>
+          <details class="mt-2">
+            <summary>Ver mais</summary>
+            <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+          </details>
+        </article>
+
+        <article class="card bg-red-600 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Alan Turing</h3>
+          <p>Criador do conceito de Máquina de Turing.</p>
+          <blockquote class="border-l-4 border-gray-400 pl-2 mt-2">
+            "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
+          </blockquote>
+        </article>
+
+        <aside class="card bg-red-600 text-white p-4 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">Curiosidade lateral</h4>
+          <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Seção Bugs -->
+    <section id="bugs">
+      <h2 class="text-2xl font-bold mb-4">Histórias de Bugs</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card bg-red-700 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">O Primeiro Bug Real</h3>
+          <p>Uma mariposa encontrada em um computador em 1947.</p>
+          <figure>
+            <figcaption>Registro do bug colado no relatório técnico.</figcaption>
+          </figure>
+        </article>
+
+        <article class="card bg-red-700 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">O Vírus Creeper</h3>
+          <p>Primeiro vírus da história (1971).</p>
+          <p>Mensagem exibida:</p>
+          <pre class="bg-white text-black p-2 rounded mt-2">
+I'M THE CREEPER : CATCH ME IF YOU CAN
+          </pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção Internet -->
+    <section id="internet">
+      <h2 class="text-2xl font-bold mb-4">Curiosidades da Internet</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card bg-green-600 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Primeiro Website</h3>
+          <p>Criado em 1991 por Tim Berners-Lee.</p>
+        </article>
+
+        <article class="card bg-green-600 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">ARPANET</h3>
+          <p>A precursora da internet moderna.</p>
+          <ul class="list-disc ml-5">
+            <li>Primeira mensagem enviada: "LO"</li>
+            <li>O sistema caiu antes de completar "LOGIN"</li>
+          </ul>
+        </article>
+
+        <article class="card bg-green-600 text-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Emojis e ASCII</h3>
+          <p>Antes dos emojis gráficos, usávamos:</p>
+          <code>:-)</code>
+          <code>;-)</code>
+          <code>:-D</code>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção Linguagens -->
+    <section id="linguagens">
+      <h2 class="text-2xl font-bold mb-4">Linguagens de Programação</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card bg-yellow-600 text-black p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">COBOL</h3>
+          <p>Ainda usado em sistemas bancários.</p>
+        </article>
+
+        <article class="card bg-yellow-600 text-black p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">C</h3>
+          <p>Base para muitos sistemas operacionais.</p>
+        </article>
+
+        <article class="card bg-yellow-600 text-black p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">HTML</h3>
+          <p>Não é linguagem de programação, mas estrutura a web.</p>
+        </article>
+
+        <div class="card bg-yellow-600 text-black p-4 rounded-lg shadow overflow-x-auto">
+          <table class="table w-full border">
+            <caption class="text-lg font-semibold mb-2">Linguagens e Ano de Criação</caption>
+            <thead>
+              <tr><th>Linguagem</th><th>Ano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>COBOL</td><td>1959</td></tr>
+              <tr><td>C</td><td>1972</td></tr>
+              <tr><td>Python</td><td>1991</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">Dados históricos aproximados</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linha do Tempo -->
+    <section id="linha-do-tempo">
+      <h2 class="text-2xl font-bold mb-4">Linha do Tempo Aleatória</h2>
+      <ol class="list-decimal ml-5">
+        <li>1837 - Máquina Analítica</li>
+        <li>1946 - ENIAC</li>
+        <li>1969 - ARPANET</li>
+        <li>1991 - Primeiro site</li>
+        <li>2007 - Popularização dos smartphones</li>
+      </ol>
+    </section>
+
+    <!-- Formulários -->
+    <section id="form">
+      <h2 class="text-2xl font-bold mb-4">Envie um Fato Inútil</h2>
+      <form class="card bg-blue-700 text-white p-4 rounded-lg shadow space-y-3">
+        <fieldset class="space-y-2">
+          <legend class="font-semibold">Cadastro de Inutilidades</legend>
+          <label>Nome:</label>
+          <input class="input input-bordered w-full" type="text" name="nome">
+          <label>Fato Inútil:</label>
+          <input class="input input-bordered w-full" type="text" name="fato">
+          <label>Grau de inutilidade (0-10):</label>
+          <input class="input input-bordered w-full" type="number" name="grau" min="0" max="10">
+          <input class="btn btn-secondary w-full" type="submit" value="Enviar inutilidade">
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="formulario">
+      <h2 class="text-2xl font-bold mb-4">Envie sua Curiosidade</h2>
+      <form class="card bg-purple-700 text-white p-4 rounded-lg shadow space-y-3">
+        <fieldset class="space-y-2">
+          <legend class="font-semibold">Informações</legend>
+          <label>Nome:</label>
+          <input class="input input-bordered w-full" type="text" name="nome">
+          <label>Email:</label>
+          <input class="input input-bordered w-full" type="email" name="email">
+          <label>Categoria:</label>
+          <select class="select select-bordered w-full" name="categoria">
+            <option>Pioneiros</option>
+            <option>Bugs</option>
+            <option>Internet</option>
+            <option>Linguagens</option>
+          </select>
+          <label>Data do fato:</label>
+          <input class="input input-bordered w-full" type="date" name="data">
+          <label>Sua curiosidade:</label>
+          <textarea class="textarea textarea-bordered w-full" name="curiosidade"></textarea>
+          <input class="btn btn-primary w-full" type="submit" value="Enviar">
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="formulario-secreto">
+      <h2 class="text-2xl font-bold mb-4">Envie um Bug ou Easter Egg</h2>
+      <form class="card bg-pink-700 text-white p-4 rounded-lg shadow space-y-3">
+        <fieldset class="space-y-2">
+          <legend class="font-semibold">Cadastro Suspeito</legend>
+          <label>Seu nome:</label>
+          <input class="input input-bordered w-full" type="text" name="nome">
+          <label>Tipo:</label>
+          <select class="select select-bordered w-full" name="tipo">
+            <option>Bug</option>
+            <option>Easter Egg</option>
+            <option>Comando estranho</option>
+          </select>
+          <label>Descrição:</label>
+          <textarea class="textarea textarea-bordered w-full" name="descricao"></textarea>
+          <label>Grau de estranheza (1-10):</label>
+          <input class="input input-bordered w-full" type="number" min="1" max="10">
+          <input class="btn btn-secondary w-full" type="submit" value="Enviar para os arquivos secretos">
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center mt-10 p-4 border-t">
+    <p>© 2026 Instituto Internacional de Informações Desnecessárias</p>
+    <address>Email: inutilidades@caosdigital.com</address>
+    <p>© 2026 Arquivo Confuso da Computação</p>
+    <address>Contato: contato@computacao.com</address>
+    <p>© 2026 Arquivo Ultra-Secreto da Computação</p>
+    <address>contato@ultrasecreto.dev</address>
+  </footer>
+
+</div>
+</body>
+</html>
