@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Curiosidades e fatos históricos da Ciência da Computação">
+    <meta name="author" content="Portal Computação">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo Confuso da Computação</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        #pagina {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 8px 12px;
+            background: #0d6efd;
+            color: white;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #0b5ed7;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        article {
+            margin-bottom: 15px;
+        }
+
+        aside {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #0d6efd;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background: #0d6efd;
+            color: white;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background: #0b5ed7;
+        }
+
+        footer {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #212529;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            background: #e9ecef;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="pagina">
+
+    <header id="topo">
+        <h1>Arquivo (Quase) Perdido da Ciência da Computação</h1>
+        <p>Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
+    </header>
+
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="#pioneiros">Pioneiros</a></li>
+            <li><a href="#bugs">Bugs</a></li>
+            <li><a href="#internet">Internet</a></li>
+            <li><a href="#linguagens">Linguagens</a></li>
+            <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
+            <li><a href="#formulario">Envie Algo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="pioneiros">
+            <h2>Pioneiros Esquecidos</h2>
+
+		<div class="card" style="width: 18rem;">
+              <img src="https://cloudfront-us-east-1.images.arcpublishing.com/estadao/PXWMY4QF25OMBIFNTVPBAQN2CM.jpg" class="card-img-top" alt="Ada Lovelace">
+              <div class="card-body">
+                <h5 class="card-title">Ada Lovelace</h5>
+                <p class="card-text">Primeira programadora da história da computação.</p>
+                <a href="#" class="btn btn-primary">Saiba mais</a>
+              </div>
+            </div>
+
+            <article>
+                <h3>Ada Lovelace</h3>
+                <p>Considerada a primeira programadora da história.</p>
+                <details>
+                    <summary>Ver mais</summary>
+                    <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+                </details>
+            </article>
+
+            <article>
+                <h3>Alan Turing</h3>
+                <p>Criador do conceito de Máquina de Turing.</p>
+                <blockquote>
+                    "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
+                </blockquote>
+            </article>
+
+            <aside>
+                <h4>Curiosidade lateral</h4>
+                <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
+            </aside>
+        </section>
+
+        <section id="bugs">
+            <h2>Histórias de Bugs</h2>
+
+            <article>
+                <h3>O Primeiro Bug Real</h3>
+                <p>Uma mariposa encontrada em um computador em 1947.</p>
+                <figure>
+                    <figcaption>Registro do bug colado no relatório técnico.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>O Vírus Creeper</h3>
+                <p>Primeiro vírus da história (1971).</p>
+                <p>Mensagem exibida:</p>
+                <pre>
+I'M THE CREEPER : CATCH ME IF YOU CAN
+                </pre>
+            </article>
+        </section>
+
+        <section id="internet">
+            <h2>Curiosidades da Internet</h2>
+
+            <article>
+                <h3>Primeiro Website</h3>
+                <p>Criado em 1991 por Tim Berners-Lee.</p>
+            </article>
+
+            <article>
+                <h3>ARPANET</h3>
+                <p>A precursora da internet moderna.</p>
+                <ul>
+                    <li>Primeira mensagem enviada: "LO"</li>
+                    <li>O sistema caiu antes de completar "LOGIN"</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Emojis e ASCII</h3>
+                <p>Antes dos emojis gráficos, usávamos:</p>
+                <code>:-)</code>
+                <code>;-)</code>
+                <code>:-D</code>
+            </article>
+        </section>
+
+        <section id="linguagens">
+            <h2>Linguagens de Programação</h2>
+
+            <article>
+                <h3>COBOL</h3>
+                <p>Ainda usado em sistemas bancários.</p>
+            </article>
+
+            <article>
+                <h3>C</h3>
+                <p>Base para muitos sistemas operacionais.</p>
+            </article>
+
+            <article>
+                <h3>HTML</h3>
+                <p>Não é linguagem de programação, mas estrutura a web.</p>
+            </article>
+
+            <div>
+                <table border="1">
+                    <caption>Linguagens e Ano de Criação</caption>
+                    <thead>
+                        <tr>
+                            <th>Linguagem</th>
+                            <th>Ano</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>COBOL</td>
+                            <td>1959</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>1972</td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>1991</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Dados históricos aproximados</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="linha-do-tempo">
+            <h2>Linha do Tempo Aleatória</h2>
+
+            <ol>
+                <li>1837 - Máquina Analítica</li>
+                <li>1946 - ENIAC</li>
+                <li>1969 - ARPANET</li>
+                <li>1991 - Primeiro site</li>
+                <li>2007 - Popularização dos smartphones</li>
+            </ol>
+        </section>
+
+
+</div>
+
+
+<header>
+    <h1>Fatos Inúteis (Mas Incríveis) da Ciência da Computação</h1>
+    <p>Informações que não vão melhorar seu código… mas vão melhorar sua aula.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#nomes">Nomes Estranhos</a></li>
+        <li><a href="#acidentes">Acidentes Tecnológicos</a></li>
+        <li><a href="#dinheiro">Erros Caríssimos</a></li>
+        <li><a href="#aleatorio">Aleatoriedades</a></li>
+        <li><a href="#form">Envie Algo Inútil</a></li>
+    </ul>
+</nav>
+
+
+
+<section id="nomes">
+    <h2>Nomes Estranhos da Computação</h2>
+
+    <article>
+        <h3>Spam vem de um presunto</h3>
+        <p>
+            O termo "spam" para emails indesejados vem de um esquete do 
+            <strong>Monty Python</strong> onde a palavra SPAM (marca de presunto enlatado) 
+            era repetida incessantemente.
+        </p>
+    </article>
+
+    <article>
+        <h3>Bluetooth tem nome viking</h3>
+        <p>
+            A tecnologia foi nomeada em homenagem ao rei 
+            <em>Harald "Bluetooth" Gormsson</em>, que unificou a Dinamarca.
+            A ideia era “unificar dispositivos”.
+        </p>
+    </article>
+
+    <article>
+        <h3>Bug é literalmente bug</h3>
+        <p>
+            O famoso inseto encontrado no computador 
+            <abbr title="Harvard Mark II">Mark II</abbr> em 1947 
+            era uma mariposa de verdade.
+        </p>
+        <details>
+            <summary>Detalhe inútil</summary>
+            <p>O inseto ainda está preservado em um museu.</p>
+        </details>
+    </article>
+
+</section>
+
+<!-- restante continua igual -->
+
+</body>
+<footer>
+    <p>© 2026 Instituto Internacional de Informações Desnecessárias</p>
+    <address>Email: inutilidades@caosdigital.com</address>
+      <p>&copy; 2026 Arquivo Confuso da Computação</p>
+        <address>
+            Contato: contato@computacao.com
+        </address>
+         <p>© 2026 Arquivo Ultra-Secreto da Computação</p>
+    <address>contato@ultrasecreto.dev</address>
+</footer>
+
+</div>
+
+</body>
+</html>
