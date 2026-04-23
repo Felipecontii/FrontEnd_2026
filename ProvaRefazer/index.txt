@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupos e Fatos</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 20px;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 500px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+details {
+    margin-top: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+<a href="#grupoA">Grupo A</a>
+<a href="#grupoB">Grupo B</a>
+<a href="#grupoC">Grupo C</a>
+</nav>
+
+<h1>Grupos da Competição</h1>
+
+<button onclick="proximo()">Próximo</button>
+
+<div class="card" id="grupoA">
+<h2>🅰️ Grupo A</h2>
+<h3>Seleções</h3>
+<ul id="listaA">
+<li>México</li>
+<li>África do Sul</li>
+<li>Coreia do Sul</li>
+<li>República Tcheca</li>
+</ul>
+<details id="fatosA">
+<summary>Saiba mais</summary>
+<ul>
+<li>O jogo de abertura será México x África do Sul.</li>
+<li>Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas.</li>
+</ul>
+</details>
+</div>
+
+<div class="card" id="grupoB">
+<h2>🅱️ Grupo B</h2>
+<h3>Seleções</h3>
+<ul id="listaB">
+<li>Canadá</li>
+<li>Suíça</li>
+<li>Catar</li>
+<li>Vaga Europeia (Bósnia)</li>
+</ul>
+<details id="fatosB">
+<summary>Saiba mais</summary>
+<ul>
+<li>O Canadá joga em casa, fator importante de desempenho.</li>
+<li>Catar e Suíça já se enfrentaram recentemente.</li>
+</ul>
+</details>
+</div>
+
+<div class="card" id="grupoC">
+<h2>🅲 Grupo C</h2>
+<h3>Seleções</h3>
+<ul id="listaC">
+<li>Brasil</li>
+<li>Marrocos</li>
+<li>Haiti</li>
+<li>Escócia</li>
+</ul>
+<details id="fatosC">
+<summary>Saiba mais</summary>
+<ul>
+<li>Brasil chega como favorito do grupo.</li>
+<li>Marrocos vem forte após boas campanhas recentes.</li>
+</ul>
+</details>
+</div>
+
+<script>
+let trocado = false;
+
+function proximo() {
+    if (!trocado) {
+
+        document.querySelector("#grupoA h2").innerText = "🅳 Grupo D";
+        document.getElementById("listaA").innerHTML = `
+            <li>Estados Unidos</li>
+            <li>Paraguai</li>
+            <li>Austrália</li>
+            <li>Turquia</li>
+        `;
+        document.getElementById("fatosA").innerHTML = `
+            <summary>Fatos</summary>
+            <ul>
+                <li>Os EUA jogam em casa, vantagem histórica em Copas.</li>
+                <li>Austrália enfrenta frequentemente seleções sul-americanas em torneios.</li>
+            </ul>
+        `;
+
+        document.querySelector("#grupoB h2").innerText = "🅴 Grupo E";
+        document.getElementById("listaB").innerHTML = `
+            <li>Alemanha</li>
+            <li>Equador</li>
+            <li>Costa do Marfin</li>
+            <li>Curaçao</li>
+        `;
+        document.getElementById("fatosB").innerHTML = `
+            <summary>Fatos</summary>
+            <ul>
+                <li>Alemanha costuma dominar fases de grupos.</li>
+                <li>Equador e Costa do Marfim têm estilos físicos semelhantes.</li>
+            </ul>
+        `;
+
+        document.querySelector("#grupoC h2").innerText = "🅵 Grupo F";
+        document.getElementById("listaC").innerHTML = `
+            <li>Holanda</li>
+            <li>Japão</li>
+            <li>Tunísia</li>
+            <li>Suécia</li>
+        `;
+        document.getElementById("fatosC").innerHTML = `
+            <summary>Fatos</summary>
+            <ul>
+                <li>Brasil, Marrocos e Escócia já dividiram grupo em 1998.</li>
+                <li>Brasil nunca perdeu para a Escócia em Copas.</li>
+            </ul>
+        `;
+
+        trocado = true;
+    }
+}
+</script>
+
+</body>
+</html>
