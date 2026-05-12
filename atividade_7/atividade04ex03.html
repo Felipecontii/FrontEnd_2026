@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Média Escolar</title>
+</head>
+<body>
+
+  <h2>Média Escolar</h2>
+
+  <input type="text" id="nome" placeholder="Nome do aluno">
+  <br><br>
+
+  <input type="number" id="nota1" placeholder="Nota 1">
+  <br><br>
+
+  <input type="number" id="nota2" placeholder="Nota 2">
+  <br><br>
+
+  <input type="number" id="nota3" placeholder="Nota 3">
+  <br><br>
+
+  <button id="calcular">Calcular Média</button>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    let botao = document.getElementById("calcular");
+
+    botao.addEventListener("click", function () {
+
+      let nome = document.getElementById("nome").value;
+
+      let nota1 = Number(document.getElementById("nota1").value);
+      let nota2 = Number(document.getElementById("nota2").value);
+      let nota3 = Number(document.getElementById("nota3").value);
+
+      let media = (nota1 + nota2 + nota3) / 3;
+
+      let resultado = document.getElementById("resultado");
+
+      if (media >= 7) {
+        resultado.innerHTML = nome + " foi APROVADO. Média: " + media.toFixed(2);
+        resultado.style.color = "blue";
+
+      } else if (media >= 4) {
+
+        let falta = 10 - media;
+
+        resultado.innerHTML =
+          nome + " está em EXAME. Média: " +
+          media.toFixed(2) +
+          ". Faltam " +
+          falta.toFixed(2) +
+          " pontos para 10.";
+
+        resultado.style.color = "green";
+
+      } else {
+        resultado.innerHTML = nome + " foi REPROVADO. Média: " + media.toFixed(2);
+        resultado.style.color = "red";
+      }
+
+    });
+  </script>
+
+</body>
+</html>

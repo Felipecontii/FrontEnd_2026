@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinity Bank</title>
+</head>
+<body>
+
+  <h2>Simulador Infinity Bank</h2>
+
+  <label>Bandeira:</label>
+  <select id="bandeira">
+    <option value="visa">Visa</option>
+    <option value="master">Master</option>
+    <option value="elo">Elo</option>
+  </select>
+
+  <br><br>
+
+  <label>Valor da Venda:</label>
+  <input type="number" id="valor">
+
+  <br><br>
+
+  <label>Parcelas:</label>
+  <input type="number" id="parcelas">
+
+  <br><br>
+
+  <button id="calcular">Calcular</button>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+
+    let botao = document.getElementById("calcular");
+
+    botao.addEventListener("click", function () {
+
+      let bandeira = document.getElementById("bandeira").value;
+      let valor = Number(document.getElementById("valor").value);
+      let parcelas = Number(document.getElementById("parcelas").value);
+
+      let taxa = 0;
+
+      switch (bandeira) {
+
+        case "visa":
+          taxa = valor * 0.02;
+          break;
+
+        case "master":
+          taxa = valor * 0.0185;
+          break;
+
+        case "elo":
+          taxa = valor * 0.03;
+          break;
+      }
+
+      let juros = valor * (0.015 * parcelas);
+
+      let taxaMensal = 12.50 * parcelas;
+
+      let total = valor + taxa + juros + taxaMensal;
+
+      let valorParcela = total / parcelas;
+
+      document.getElementById("resultado").innerHTML =
+        "Taxa da Bandeira: R$ " + taxa.toFixed(2) + "<br>" +
+        "Juros: R$ " + juros.toFixed(2) + "<br>" +
+        "Taxa Mensal: R$ " + taxaMensal.toFixed(2) + "<br>" +
+        "Valor Total: R$ " + total.toFixed(2) + "<br>" +
+        "Valor da Parcela: R$ " + valorParcela.toFixed(2);
+
+    });
+
+  </script>
+
+</body>
+</html>
