@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador Infinity</title>
+
+  <style>
+
+    body{
+      font-family: Arial;
+      background-color: #f0f0f0;
+    }
+
+    .card{
+      width: 350px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    input,
+    button{
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    .resultado{
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <h2>Validador de Cartão</h2>
+
+    <input 
+      type="text" 
+      id="cartao" 
+      placeholder="Digite o número do cartão"
+    >
+
+    <button onclick="analisarCartao()">
+      Analisar Cartão
+    </button>
+
+    <div class="resultado">
+      <p id="status"></p>
+      <p id="bandeira"></p>
+      <p id="setor"></p>
+      <p id="banco"></p>
+    </div>
+
+  </div>
+
+  <script>
+
+    function analisarCartao(){
+
+      let numero = document
+      .getElementById("cartao")
+      .value;
+
+      numero = numero.replace(/\s/g, "");
+      numero = numero.replace(/\./g, "");
+
+      if(numero.length < 13 || numero.length > 16){
+
+        alert("O cartão deve ter entre 13 e 16 dígitos");
+
+        return;
+      }
+
+      let valido = validarLuhn(numero);
+
+      let bandeira = "Desconhecida";
+      let banco = "Não identificado";
+
+      if(numero.startsWith("4")){
+        bandeira = "Visa";
+        banco = "Banco Visa";
+      }
+
+      else if(
+        numero.startsWith("5")
+      ){
+        bandeira = "MasterCard";
+        banco = "Banco Master";
+      }
+
+      else if(
+        numero.startsWith("34") ||
+        numero.startsWith("37")
+      ){
+        bandeira = "American Express";
+        banco = "Amex";
+      }
+
+      let setor = identificarSetor(numero[0]);
+
+      document.getElementById("status").innerHTML =
+      "Status: " + (valido ? "Válido" : "Inválido");
+
+      document.getElementById("bandeira").innerHTML =
+      "Bandeira: " + bandeira;
+
+      document.getElementById("setor").innerHTML =
+      "Setor: " + setor;
+
+      document.getElementById("banco").innerHTML =
+      "Banco Emissor: " + banco;
+
+    }
+
+    function validarLuhn(numero){
+
+      let soma = 0;
+
+      let inverter = numero
+      .split("")
+      .reverse();
+
+      for(let i = 0; i < inverter.length; i++){
+
+        let digito = Number(inverter[i]);
+
+        if(i % 2 != 0){
+
+          digito = digito * 2;
+
+          if(digito > 9){
+            digito = digito - 9;
+          }
+        }
+
+        soma += digito;
+      }
+
+      return soma % 10 == 0;
+    }
+
+    function identificarSetor(digito){
+
+      switch(digito){
+
+        case "1":
+          return "Companhias Aéreas";
+
+        case "2":
+          return "Financeiro";
+
+        case "3":
+          return "Viagens e Entretenimento";
+
+        case "4":
+        case "5":
+          return "Bancos e Financeiras";
+
+        case "6":
+          return "Comércio";
+
+        default:
+          return "Outros";
+      }
+    }
+
+  </script>
+
+</body>
+</html>
